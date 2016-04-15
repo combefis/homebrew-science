@@ -221,7 +221,7 @@ class Octave < Formula
         All graphics terminals can be used by setting the environment variable GNUTERM
         in ~/.octaverc, and building gnuplot with the corresponding options.
 
-          setenv('GNUTERM','qt')    # Requiers QT; install gnuplot --with-qt
+          setenv('GNUTERM','qt')    # Requires QT; install gnuplot --with-qt
           setenv('GNUTERM','x11')   # Requires XQuartz; install gnuplot --with-x11
           setenv('GNUTERM','wxt')   # Requires wxmac; install gnuplot --with-wxmac
           setenv('GNUTERM','aqua')  # Requires AquaTerm; install gnuplot --with-aquaterm
@@ -237,9 +237,9 @@ class Octave < Formula
     if build.without?("osmesa") || (build.with?("osmesa") && build.with?("opengl"))
       s += <<-EOS.undent
 
-      When using the the qt or fltk toolkits then invisible figures do not work because
+      When using the qt or fltk toolkits then invisible figures do not work because
       osmesa does currently not work with the Mac's OpenGL implementation. The usage of
-      gnuplot is recommened.
+      gnuplot is recommended.
 
       EOS
     end
@@ -250,7 +250,7 @@ class Octave < Formula
       unless logs.empty?
         s += <<-EOS.undent
 
-            Octave's self-tests for this installation produced the following failues:
+            Octave's self-tests for this installation produced the following failures:
             --------
         EOS
         s += logs + <<-EOS.undent
